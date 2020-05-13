@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "494262037146",
+    "firebase_url": "https://cheers-f4af9.firebaseio.com",
+    "project_id": "cheers-f4af9",
+    "storage_bucket": "cheers-f4af9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494262037146:android:2b07fda63f5671f03a4d23",
+        "android_client_info": {
+          "package_name": "eurica.mei.cheers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494262037146-r0v45il0qsd8ratees13op357ssdbsci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuZE5dcf42QbymtIlgtDmoG32jEHWwmVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494262037146-r0v45il0qsd8ratees13op357ssdbsci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
