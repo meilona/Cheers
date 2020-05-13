@@ -1,5 +1,9 @@
 package eurica.mei.cheers;
 
+import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -10,9 +14,15 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    Dialog statusDialog;
+    Button btnPost;
+    ImageView closePopup;
+    EditText etStatus;
 
 
     @Override
@@ -22,14 +32,41 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        statusDialog = new Dialog(this);
+
        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                ShowAddStatusPopUp();
             }
         });
+    }
+
+    private void ShowAddStatusPopUp() {
+        statusDialog.setContentView(R.layout.activity_add_status);
+        closePopup = (ImageView) statusDialog.findViewById(R.id.closePopup);
+        etStatus = (EditText) statusDialog.findViewById(R.id.etStatus);
+        btnPost = (Button) statusDialog.findViewById(R.id.btnPost);
+
+        closePopup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                statusDialog.dismiss();
+            }
+        });
+
+        btnPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                statusDialog.dismiss();
+            }
+        });
+
+        statusDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        statusDialog.show();
+
     }
 
     @Override

@@ -35,10 +35,13 @@ public class FirstFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_first, container, false);
-        //ambil database
+        // database
         db = FirebaseFirestore.getInstance();
+
+        //create arrayList to save firestore data
         statusArrayList = new ArrayList<>();
-        //ambil data dari koleksi Carwash firestore
+
+        //retrieve status collection from firestore
         db.collection("status").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {

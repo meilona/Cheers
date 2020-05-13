@@ -20,10 +20,6 @@
             android:background="@color/colorMain"
             android:elevation="2dp"
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
-<!--        <View  android:layout_width="match_parent"-->
-<!--            android:layout_height="1dp"-->
-<!--            android:background="@color/colorWhite"-->
-<!--            android:layout_below="@+id/toolbar"/>-->
 
     </com.google.android.material.appbar.AppBarLayout>
 <!--    end of toolbar-->
